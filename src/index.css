@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 20% 99%;
+    --foreground: 24 10% 10%;
+
+    --card: 40 20% 97%;
+    --card-foreground: 24 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 24 10% 20%;
+
+    --muted: 40 10% 95%;
+    --muted-foreground: 24 5% 45%;
+
+    --accent: 25 90% 95%;
+    --accent-foreground: 25 80% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 40 15% 97%;
+    --sidebar-foreground: 24 10% 30%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 90% 95%;
+    --sidebar-accent-foreground: 25 80% 35%;
+    --sidebar-border: 30 10% 92%;
+    --sidebar-ring: 25 95% 53%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 210 80% 55%;
+    --info-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 24 10% 8%;
+    --foreground: 40 15% 90%;
+
+    --card: 24 10% 11%;
+    --card-foreground: 40 15% 90%;
+
+    --popover: 24 10% 10%;
+    --popover-foreground: 40 15% 90%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 24 8% 16%;
+    --secondary-foreground: 40 15% 85%;
+
+    --muted: 24 8% 15%;
+    --muted-foreground: 24 5% 55%;
+
+    --accent: 25 50% 15%;
+    --accent-foreground: 25 90% 70%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 24 8% 18%;
+    --input: 24 8% 18%;
+    --ring: 25 95% 55%;
+
+    --sidebar-background: 24 10% 6%;
+    --sidebar-foreground: 40 10% 70%;
+    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 50% 12%;
+    --sidebar-accent-foreground: 25 90% 70%;
+    --sidebar-border: 24 8% 15%;
+    --sidebar-ring: 25 95% 55%;
+
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 210 80% 50%;
+    --info-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-sm border border-border;
+  }
+  .notion-shadow {
+    box-shadow: 0 1px 3px 0 hsl(var(--foreground) / 0.04),
+                0 1px 2px -1px hsl(var(--foreground) / 0.04);
+  }
+  .notion-shadow-lg {
+    box-shadow: 0 4px 6px -1px hsl(var(--foreground) / 0.05),
+                0 2px 4px -2px hsl(var(--foreground) / 0.05);
+  }
+}
